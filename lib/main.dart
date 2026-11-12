@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
-
+// Inicia l'aplicació.
 void main() {
   runApp(const MyApp());
 }
@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // Crea la pantalla principal de l'aplicació.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,6 +28,7 @@ class MyHomePage extends StatelessWidget {
   final String title = 'Salesians Sarrià 25/26';
   final _formKey = GlobalKey<FormBuilderState>();
 
+  // Construeix la pantalla amb tots els camps del formulari.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,6 +156,7 @@ class FormLabelGroup extends StatelessWidget {
   String title;
   String? subtitle;
 
+  // Mostra el subtítol només si existeix.
   Widget conditionalSubtitle(BuildContext context) {
     if (subtitle != null) {
       return Text(subtitle!,
@@ -167,6 +169,7 @@ class FormLabelGroup extends StatelessWidget {
     }
   }
 
+  // Mostra el títol i el subtítol del camp.
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -191,6 +194,7 @@ class FormTitle extends StatelessWidget {
     super.key,
   });
 
+  // Mostra el títol i la descripció del formulari.
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -210,6 +214,7 @@ class FormTitle extends StatelessWidget {
   }
 }
 
+// Mostra una finestra amb les dades enviades del formulari.
 void alertDialog(BuildContext context, String contentText) {
   showDialog<String>(
     context: context,
